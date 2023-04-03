@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>This is a number guessing game</h3>
+    <h4>{{number}}</h4> <!--to be taken out after development-->
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}   
+            <fieldset class="form-group">    
+                <legend class="border-bottom mb-4">Please supply your name below</legend>
+                <div class="form-group">
+                    {{ form.name.label(class="form-control-label") }}
+                    {{ form.name(class="form-control form-control-lg") }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
